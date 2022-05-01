@@ -1,0 +1,14 @@
+ CREATE TABLE IF NOT EXISTS countries (
+    id INTEGER PRIMARY KEY,
+    countries TEXT NOT NULL,
+    population INTEGER NOT NULL,
+    FOREIGN KEY(countries) REFERENCES footballer(countries)
+);
+
+CREATE TABLE IF NOT EXISTS footballer (
+    id INTEGER PRIMARY KEY,
+    footballer_name TEXT NOT NULL,
+    goals_score INTEGER NOT NULL,
+    countries TEXT NOT NULL,
+    weak_foot TEXT NOT NULL
+);
